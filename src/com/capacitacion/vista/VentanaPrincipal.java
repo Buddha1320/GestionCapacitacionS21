@@ -89,6 +89,16 @@ public class VentanaPrincipal extends JFrame {
             new VentanaGestionCursos().setVisible(true);
             System.out.println("Botón 'Gestión de Cursos' clicado.");
         });
+        
+        btnGestionAlumnos.addActionListener(e -> {
+            new VentanaGestionAlumnos().setVisible(true);
+            System.out.println("Botón 'Gestión de Alumnos' clicado.");
+        });
+        
+        btnGestionCarreras.addActionListener(e -> {
+     	   new VentanaGestionCarreras().setVisible(true);
+     	  System.out.println("Botón 'Gestión de Carreras' clicado.");
+        });
     }
 
     // Método principal solo si querés probar esta ventana sola
