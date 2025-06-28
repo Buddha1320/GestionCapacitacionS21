@@ -7,7 +7,7 @@ import java.awt.event.*;
 import java.sql.*;
 import java.util.ArrayList;
 
-//Clase para gestionar cursos y asignación de notas.
+//S21 - Clase para gestionar cursos y asignación de notas.
 //Nota: Aún podría refactorizarse en varias clases... pero por ahora queda así.
 
 public class VentanaGestionCursos extends JFrame {
@@ -27,7 +27,7 @@ public class VentanaGestionCursos extends JFrame {
      setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
      setLayout(new BorderLayout(10, 10));
 
-     // Panel superior: combos de carrera y curso
+     // S21 Panel superior: combos de carrera y curso
      JPanel panelSuperior = new JPanel(new GridLayout(2, 2, 5, 5));
      panelSuperior.setBorder(BorderFactory.createTitledBorder("Carrera y Curso"));
 
@@ -442,9 +442,9 @@ public class VentanaGestionCursos extends JFrame {
          ResultSet rs = ps.executeQuery();
          while (rs.next()) {
              modelo.addRow(new Object[]{
-                     rs.getString("nombre_materia"),
-                     rs.getObject("nota"),
-                     rs.getString("descripcion_estado_materia")
+                     rs.getString("Nombre_materia"),
+                     rs.getObject("Nota"),
+                     rs.getString("Descripcion_estado_materia")
              });
          }
      } catch (SQLException e) {
